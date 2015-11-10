@@ -49,7 +49,7 @@
             this.btnRight = new System.Windows.Forms.Button();
             this.btnDown = new System.Windows.Forms.Button();
             this.textscore = new System.Windows.Forms.Label();
-            this.lblScore = new System.Windows.Forms.Label();
+            this.lblScore1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl00
@@ -247,7 +247,7 @@
             // btnLeft
             // 
             this.btnLeft.Location = new System.Drawing.Point(113, 414);
-            this.btnLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLeft.Margin = new System.Windows.Forms.Padding(4);
             this.btnLeft.Name = "btnLeft";
             this.btnLeft.Size = new System.Drawing.Size(71, 55);
             this.btnLeft.TabIndex = 16;
@@ -258,7 +258,7 @@
             // btnUp
             // 
             this.btnUp.Location = new System.Drawing.Point(187, 378);
-            this.btnUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUp.Margin = new System.Windows.Forms.Padding(4);
             this.btnUp.Name = "btnUp";
             this.btnUp.Size = new System.Drawing.Size(71, 55);
             this.btnUp.TabIndex = 17;
@@ -269,7 +269,7 @@
             // btnRight
             // 
             this.btnRight.Location = new System.Drawing.Point(260, 414);
-            this.btnRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRight.Margin = new System.Windows.Forms.Padding(4);
             this.btnRight.Name = "btnRight";
             this.btnRight.Size = new System.Drawing.Size(71, 55);
             this.btnRight.TabIndex = 18;
@@ -280,7 +280,7 @@
             // btnDown
             // 
             this.btnDown.Location = new System.Drawing.Point(187, 457);
-            this.btnDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDown.Margin = new System.Windows.Forms.Padding(4);
             this.btnDown.Name = "btnDown";
             this.btnDown.Size = new System.Drawing.Size(71, 55);
             this.btnDown.TabIndex = 19;
@@ -299,23 +299,23 @@
             this.textscore.Text = "Score";
             this.textscore.Click += new System.EventHandler(this.label1_Click);
             // 
-            // lblScore
+            // lblScore1
             // 
-            this.lblScore.AutoSize = true;
-            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lblScore.Location = new System.Drawing.Point(429, 121);
-            this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(31, 32);
-            this.lblScore.TabIndex = 21;
-            this.lblScore.Text = "0";
-            this.lblScore.Click += new System.EventHandler(this.lblScore_Click);
+            this.lblScore1.AutoSize = true;
+            this.lblScore1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lblScore1.Location = new System.Drawing.Point(445, 121);
+            this.lblScore1.Name = "lblScore1";
+            this.lblScore1.Size = new System.Drawing.Size(31, 32);
+            this.lblScore1.TabIndex = 21;
+            this.lblScore1.Text = "0";
+            this.lblScore1.Click += new System.EventHandler(this.lblScore_Click);
             // 
             // TwoZeroFourEightView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 519);
-            this.Controls.Add(this.lblScore);
+            this.Controls.Add(this.lblScore1);
             this.Controls.Add(this.textscore);
             this.Controls.Add(this.btnDown);
             this.Controls.Add(this.btnRight);
@@ -337,9 +337,10 @@
             this.Controls.Add(this.lbl02);
             this.Controls.Add(this.lbl01);
             this.Controls.Add(this.lbl00);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TwoZeroFourEightView";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.TwoZeroFourEightView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,7 +369,7 @@
         private System.Windows.Forms.Button btnRight;
         private System.Windows.Forms.Button btnDown;
         private System.Windows.Forms.Label textscore;
-        private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Label lblScore1;
     }
 }
 

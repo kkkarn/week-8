@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace twozerofoureight
 {
-    public partial class TwoZeroFourEightView : Form, View
+    public partial class TwoZeroFourEightView : Form,View
     {
         Model model;
         Controller controller;
-       
+        public TwoZeroFourEightScoreView Scr = new TwoZeroFourEightScoreView();
+
+
+
         public TwoZeroFourEightView()
         {
             InitializeComponent();
@@ -22,13 +25,16 @@ namespace twozerofoureight
             model.AttachObserver(this);
             controller = new TwoZeroFourEightController();
             controller.AddModel(model);
+            model.AttachObserver(Scr);
             controller.ActionPerformed(TwoZeroFourEightController.LEFT);
+            Scr.Show();
         }
 
         public void Notify(Model m)
         {
             UpdateBoard(((TwoZeroFourEightModel) m).GetBoard());
-            Updatescore(((TwoZeroFourEightModel) m).GetBoard());
+            //Updatescore(((TwoZeroFourEightModel) m).GetBoard());
+            lblScore1.Text = (((TwoZeroFourEightModel)m).Updatescore());
         }
 
         private void UpdateTile(Label l, int i)
@@ -108,19 +114,10 @@ namespace twozerofoureight
 
         }
 
-        private void Updatescore(int[,] board)
+        private void TwoZeroFourEightView_Load(object sender, EventArgs e)
         {
-            int sum = 0;
-            for (int i = 0; i < 4; i++)
-            {
-            for(int j = 0; j < 4; j++)
-            {
-                    sum += board[i,j];
-            }
-            }
-            lblScore.Text = Convert.ToString(sum);
-        }
 
-       
+        }
+        
     }
 }
